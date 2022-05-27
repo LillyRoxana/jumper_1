@@ -1,9 +1,16 @@
 import random
+import os
+from game import ROOT_DIR,DATA_DIR
  
 class word_list:
         
     def __init__(self):
-            
+
+        # open the word_list.txt and pick a random word
+        self._word_list = open(os.path.join(DATA_DIR,'word_list.txt'),'r')
+        self._word_list = self._word_list.readlines()
+        self._random_word = random.choice(self._word_list)
+
         words = {
                 1: 'wares',
                 2: 'soup',
