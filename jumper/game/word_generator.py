@@ -49,4 +49,3 @@ class word_list:
 
         return attempt
 
-

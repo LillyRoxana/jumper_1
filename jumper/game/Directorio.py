@@ -1,10 +1,8 @@
-
-
 from game.puzzle import Puzzle
 from game.word_generator import word_list
 from game.jumper import Jumper
+
 class Director:
-    
 
     def __init__(self):
         
