@@ -9,18 +9,11 @@ class word_list:
         # open the word_list.txt and pick a random word
         self._word_list = open(os.path.join(DATA_DIR,'word_list.txt'),'r')
         self._word_list = self._word_list.readlines()
-        self._random_word = random.choice(self._word_list)
+        self._random_word = random.choice(self._word_list).replace('\n', '')
+        # print the random_word for testing purposes
+        print(self._random_word)
 
-        words = {
-                1: 'wares',
-                2: 'soup',
-                3: 'mount',
-                4: 'extend',
-                5: 'brown'
-                
-            }
-        option = random.randint(1, 5)
-        self._word = words[option].lower()
+        self._word = self._random_word
 
     def lets_to_compare_letters(self, _guesser):
 
